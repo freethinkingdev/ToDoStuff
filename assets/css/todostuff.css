@@ -1,3 +1,21 @@
-body {
-    background: deepskyblue;
+html {
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+#container {
+    margin: 1% auto;
+    width: 40%;
+    border: solid 2px darkgrey;
+}
+.listDone {
+    text-decoration: line-through;
+    color: #878787;
+}
+
+.linkLookLikeHandle {
+    cursor: pointer;
 }
