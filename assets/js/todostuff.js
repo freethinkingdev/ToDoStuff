@@ -3,18 +3,27 @@
  */
 
 /*Class toggle on lis*/
-$("#toDoUlList li").click(function (e) {
+$("#toDoUlList").on("click","li",function (e) {
     $(this).toggleClass("listDone");
     e.stopPropagation();
 });
 
 /*Creating functionality for the delete button to remove item from the list*/
-$("#toDoUlList span").on("click", function (e) {
+$("#toDoUlList").on("click", "span", function (e) {
     e.stopPropagation();
     console.log($(this).text());
-    $(this).parent().fadeOut(200, function () {
+    $(this).parent().fadeOut(300, function () {
         $(this).remove();
     });
+});
+
+$("#newToDoItem").on("keypress", function (e) {
+    var enterKey = e.which;
+    if (enterKey === 13){
+        var newItemToAddToTheList = $(this).val();
+        $("#toDoUlList").append("<li class='linkLookLikeHandle'><span>X</span> "+newItemToAddToTheList+"</li>");
+        $(this).val("");
+    }
 });
 
 
