@@ -21,7 +21,7 @@ $("#newToDoItem").on("keypress", function (e) {
     var enterKey = e.which;
     if (enterKey === 13){
         var newItemToAddToTheList = $(this).val();
-        $("#toDoUlList").append("<li class='linkLookLikeHandle'><span>X</span> "+newItemToAddToTheList+"</li>");
+        $("#toDoUlList").append("<li class='linkLookLikeHandle'><span><i class='fa fa-trash' aria-hidden='true'></i></span> "+newItemToAddToTheList+"</li>");
         $(this).val("");
     }
 });
