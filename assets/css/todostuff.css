@@ -24,13 +24,32 @@ ul {
 
 li {
     background: white;
-    padding: 2%;
+    padding: 0;
     color: #565656;
+    line-height: 40px;
+    text-transform: capitalize;
 ;
 }
 li:nth-child(2n) {
     background: var(--grey-background);
 }
+
+#toDoUlList li span {
+    background: #fb0000;
+    margin-right: 20px;
+    height: 40px;
+    color: white;
+    text-align: center;
+    width: 0px;
+    display: inline-block;
+    transition: all 0.3s linear;
+    opacity: 0;
+}
+#toDoUlList li:hover span {
+    width: 40px;
+    opacity: 1;
+}
+
 
 h1 {
     background: var(--header-background-color);
@@ -81,4 +100,9 @@ h1 {
 
 .fa-pencil {
     float: right;
+}
+
+.center {
+    margin: 0 auto;
+    text-align: center;
 }
